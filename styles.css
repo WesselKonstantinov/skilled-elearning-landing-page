@@ -82,9 +82,14 @@ select {
   --color-flamboyant-flamingo: hsl(341 92% 62%);
   --color-taffy-pink: hsl(341 100% 83%);
   --color-white: hsl(0 0% 100%);
+  --color-foundation-white: hsl(236 100% 97%);
   --color-outrageous-orange: hsl(13 100% 64%);
   --color-magnificent-magenta: hsl(322 87% 55%);
   --color-hooloovoo-blue: hsl(237 100% 64%);
+  --gradient-white-to-foundation-white: linear-gradient(
+    var(--color-white) 0%,
+    var(--color-foundation-white) 100%
+  );
   --gradient-orange-to-magenta: linear-gradient(
     var(--color-outrageous-orange) 0%,
     var(--color-magnificent-magenta) 100%
@@ -110,4 +115,27 @@ select {
   --line-height-2xl: 1.555;
   --line-height-3xl: 1.625;
   --line-height-4xl: 1.75;
+}
+
+/* || Global styles */
+body {
+  color: var(--color-top-shelf);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-3xl);
+}
+
+/* || Page container styles */
+.page {
+  box-sizing: content-box;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding: 1rem 1rem 0;
+  background-image: var(--gradient-white-to-foundation-white);
+}
+
+.page__inner {
+  max-width: 69.375rem;
+  margin-inline: auto;
 }

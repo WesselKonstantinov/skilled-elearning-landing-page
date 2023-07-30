@@ -128,16 +128,39 @@ body {
 
 /* || Page container styles */
 .page {
-  box-sizing: content-box;
   max-width: 90rem;
   margin-inline: auto;
-  padding: 1rem 1rem 0;
   background-image: var(--gradient-white-to-foundation-white);
 }
 
-.page__inner {
+/* || Landmark section styles */
+.section {
+  padding-inline: 1rem;
+}
+
+.section--header {
+  padding-block: 1rem;
+}
+
+.section--main {
+  margin-top: 1.375rem;
+}
+
+.section--footer {
+  margin-top: 5rem;
+  padding-block: 2.25rem;
+  background-color: var(--color-deadly-depths);
+}
+
+.section__inner {
   max-width: 69.375rem;
   margin-inline: auto;
+}
+
+.section__inner--spaced {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* || Logo and link styles */
@@ -187,27 +210,4 @@ body {
 
 .cta--footer {
   background-image: var(--gradient-blue-to-magenta);
-}
-
-/* || Header styles */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* || Main content styles */
-.main-content {
-  margin-top: 2.375rem;
-}
-
-/* || Footer styles */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5rem;
-  margin-inline: -1rem;
-  padding: 2.25rem 1rem;
-  background-color: var(--color-deadly-depths);
 }

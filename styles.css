@@ -188,3 +188,26 @@ body {
 .cta--footer {
   background-image: var(--gradient-blue-to-magenta);
 }
+
+/* || Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* || Main content styles */
+.main-content {
+  margin-top: 2.375rem;
+}
+
+/* || Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  margin-inline: -1rem;
+  padding: 2.25rem 1rem;
+  background-color: var(--color-deadly-depths);
+}

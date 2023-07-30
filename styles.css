@@ -139,3 +139,52 @@ body {
   max-width: 69.375rem;
   margin-inline: auto;
 }
+
+/* || Logo and link styles */
+.logo {
+  width: 5.5625rem;
+  height: 2.1875rem;
+  object-fit: contain;
+}
+
+.link {
+  transition: transform 0.2s ease-in-out 0s;
+}
+
+.link:hover {
+  transform: scale(1.15);
+}
+
+/* || CTA styles */
+.cta {
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  color: var(--color-flamboyant-flamingo);
+}
+
+.cta--contained {
+  padding: 0.5625rem 1.5rem 0.6875rem;
+  border-radius: 1.75rem;
+  color: var(--color-white);
+  line-height: var(--line-height-4xl);
+}
+
+.cta--text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-2xl);
+}
+
+.cta--header {
+  background-color: var(--color-deadly-depths);
+}
+
+.cta--main {
+  padding: 0.9375rem 2.3125rem 0.9375rem 2.375rem;
+  background-image: var(--gradient-orange-to-magenta);
+  line-height: var(--line-height-3xl);
+}
+
+.cta--footer {
+  background-image: var(--gradient-blue-to-magenta);
+}

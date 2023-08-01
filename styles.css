@@ -254,7 +254,7 @@ body {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(21.25rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
   gap: 2.5rem;
   align-items: stretch;
 }
@@ -297,4 +297,56 @@ body {
 
 .course-card__text {
   --flow-space: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .page {
+    overflow-x: hidden;
+  }
+
+  .section {
+    padding-inline: 2.5rem;
+  }
+
+  .section--header {
+    padding-block: 1.5rem;
+  }
+
+  .section--main {
+    margin-top: 4.6875rem;
+  }
+
+  .section--footer {
+    margin-top: 5.375rem;
+  }
+
+  .hero {
+    grid-template-columns: 58% 42%;
+    gap: 1.08125rem;
+  }
+
+  .hero__image-container {
+    max-width: 18.75rem;
+  }
+
+  .hero__image {
+    transform: scale(2.4) translate(3.1rem, -1.4rem);
+  }
+
+  .courses {
+    margin-top: 12rem;
+  }
+
+  .courses__list {
+    gap: 3.5rem 0.625rem;
+  }
+
+  .course-card {
+    padding-right: 1.375rem;
+  }
+
+  .course-card--intro {
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+  }
 }

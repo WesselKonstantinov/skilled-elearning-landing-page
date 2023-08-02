@@ -226,7 +226,8 @@ body {
 
 /* || Hero section styles */
 .hero {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 2.875rem;
 }
 
@@ -242,7 +243,7 @@ body {
 }
 
 .hero__image-container {
-  justify-self: center;
+  align-self: center;
 }
 
 .hero__image {
@@ -321,20 +322,24 @@ body {
   }
 
   .hero {
-    grid-template-columns: 58% 42%;
+    flex-direction: row;
     gap: 1.08125rem;
   }
 
+  .hero__intro {
+    flex: 1 0 24.875rem;
+  }
+
   .hero__image-container {
-    max-width: 18.75rem;
+    flex: 0 0 18.75rem;
   }
 
   .hero__image {
-    transform: scale(2.4) translate(3.1rem, -1.4rem);
+    transform: scale(2.3) translate(3.1rem, -1.6rem);
   }
 
   .courses {
-    margin-top: 12rem;
+    margin-top: 11.25rem;
   }
 
   .courses__list {

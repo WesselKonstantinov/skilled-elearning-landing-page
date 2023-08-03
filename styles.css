@@ -98,6 +98,10 @@ select {
     var(--color-hooloovoo-blue) 0%,
     var(--color-magnificent-magenta) 100%
   );
+  --gradient-faded-white: linear-gradient(
+    hsl(0 0% 100% / 0.5) 0%,
+    hsl(0 0% 100% / 0.5) 100%
+  );
   --font-family-primary: "Plus Jakarta Sans", sans-serif;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
@@ -196,13 +200,33 @@ body {
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   color: var(--color-flamboyant-flamingo);
+  transition: all 0.2s ease-out 0s;
 }
 
 .cta--contained {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   padding: 0.625rem 1.5rem;
   border-radius: 1.75rem;
   color: var(--color-white);
   line-height: var(--line-height-4xl);
+}
+
+.cta--contained::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease-out 0s;
+}
+
+.cta--contained:hover::before {
+  opacity: 1;
 }
 
 .cta--text {
@@ -210,8 +234,16 @@ body {
   line-height: var(--line-height-2xl);
 }
 
+.cta--text:hover {
+  color: var(--color-taffy-pink);
+}
+
 .cta--header {
   background-color: var(--color-deadly-depths);
+}
+
+.cta--header:hover::before {
+  background-color: var(--color-dusted-peri);
 }
 
 .cta--main {
@@ -220,8 +252,17 @@ body {
   line-height: var(--line-height-3xl);
 }
 
+.cta--main:hover::before {
+  background-image: var(--gradient-faded-white),
+    var(--gradient-orange-to-magenta);
+}
+
 .cta--footer {
   background-image: var(--gradient-blue-to-magenta);
+}
+
+.cta--footer:hover::before {
+  background-image: var(--gradient-faded-white), var(--gradient-blue-to-magenta);
 }
 
 /* || Hero section styles */
@@ -239,7 +280,7 @@ body {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-extrabold);
   color: var(--color-deadly-depths);
-  line-height: normal;
+  line-height: var(--line-height-base);
 }
 
 .hero__image-container {
@@ -287,7 +328,7 @@ body {
   color: var(--color-deadly-depths);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-extrabold);
-  line-height: normal;
+  line-height: var(--line-height-base);
 }
 
 .course-card__heading--large {
@@ -352,6 +393,7 @@ body {
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .course-card--intro {

@@ -345,7 +345,7 @@ body {
 }
 
 /* || Media queries */
-@media (min-width: 40.5rem) {
+@media (min-width: 41.5rem) {
   .page {
     overflow-x: hidden;
   }
@@ -367,11 +367,8 @@ body {
   }
 
   .hero {
-    grid-template-columns: 1fr 15rem;
-  }
-
-  .hero__image-container {
-    outline: 1px solid red;
+    grid-template-columns: minmax(20%, 24.875rem) 15rem;
+    justify-content: space-between;
   }
 
   .hero__image {
@@ -397,7 +394,7 @@ body {
   }
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 66.5rem) {
   body {
     font-size: var(--font-size-lg);
     line-height: var(--line-height-2xl);
@@ -431,6 +428,10 @@ body {
     border-radius: 1.96875rem;
   }
 
+  .hero {
+    grid-template-columns: 1fr 30rem;
+  }
+
   .hero__heading {
     font-size: var(--font-size-5xl);
   }
@@ -440,8 +441,12 @@ body {
     max-width: 27.8125rem;
   }
 
+  .hero__image {
+    transform: scale(2.2) translate(5rem, -4.1rem);
+  }
+
   .courses {
-    margin-top: 14rem;
+    margin-top: 11rem;
   }
 
   .courses__list {
@@ -469,5 +474,11 @@ body {
 
   .course-card__text {
     --flow-space: 1.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero__image {
+    transform: scale(2.2) translate(6.2rem, -4.1rem);
   }
 }

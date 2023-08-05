@@ -142,6 +142,11 @@ body {
   border-width: 0;
 }
 
+:is(a):focus-visible {
+  outline: 0.3rem solid var(--color-magnificent-magenta);
+  outline-offset: 0.3rem;
+}
+
 /* || Page container styles */
 .page {
   max-width: 90rem;
